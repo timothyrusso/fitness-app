@@ -52,7 +52,7 @@ const Login = () => {
 
 export default Login
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
     container: {
         marginHorizontal: 20,
         flex: 1,
