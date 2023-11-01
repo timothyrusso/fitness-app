@@ -1,14 +1,18 @@
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Main from "../screens/Main";
-import ExamplePage from "../screens/ExamplePage";
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Main from '../screens/Main';
+import ExamplePage from '../screens/ExamplePage';
 
-const InsideStack = createNativeStackNavigator();
+const MainPageStack = createNativeStackNavigator();
 
 export const MainPageNavigator = () => {
   return (
-    <InsideStack.Navigator>
-      <InsideStack.Screen name='Main Page' component={Main} options={{ headerShown: false }} />
-      <InsideStack.Screen name='Example Page' component={ExamplePage} />
-    </InsideStack.Navigator>
-  )
-}
+    <MainPageStack.Navigator>
+      <MainPageStack.Screen
+        name="Main Page"
+        component={Main}
+        options={{ headerShown: false }}
+      />
+      <MainPageStack.Screen name="Example Page" component={ExamplePage} />
+    </MainPageStack.Navigator>
+  );
+};

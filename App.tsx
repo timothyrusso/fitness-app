@@ -16,13 +16,25 @@ export default function App() {
     onAuthStateChanged(FIREBASE_AUTH, (user) => {
       setUser(user);
     });
-  }, [])
+  }, []);
 
   return (
-  <NavigationContainer>
-    <Stack.Navigator initialRouteName='Logins'>
-    {user ? <Stack.Screen name='Main' component={MainPageNavigator} options={{ headerShown: false }} /> : <Stack.Screen name='Login' component={Login} options={{ headerShown: false }} />}
-    </Stack.Navigator>
-  </NavigationContainer>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Logins">
+        {user ? (
+          <Stack.Screen
+            name="Main"
+            component={MainPageNavigator}
+            options={{ headerShown: false }}
+          />
+        ) : (
+          <Stack.Screen
+            name="Login"
+            component={Login}
+            options={{ headerShown: false }}
+          />
+        )}
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
