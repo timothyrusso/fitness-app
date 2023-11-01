@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import { TouchableOpacity, Text, StyleProp, TextStyle, ViewStyle } from 'react-native';
-import styles from './style';
+import styles from './CustomButton.style';
 
 interface CustomButtonProps {
   title: string;

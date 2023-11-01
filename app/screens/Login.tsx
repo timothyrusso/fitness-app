@@ -13,7 +13,6 @@ const Login = () => {
         setLoading(true);
         try {
           const response = await signInWithEmailAndPassword(auth, email, password);
-          alert('Logged in successfully')
         } catch (error: any) {
             console.log(error)
             alert('sign in failed: ' + error.message)
@@ -26,7 +25,7 @@ const Login = () => {
         setLoading(true);
         try {
           const response = await createUserWithEmailAndPassword(auth, email, password);
-          alert('Sign up successful')
+          alert('Sign up successful, now go to Sign in!')
         } catch (error: any) {
             console.log(error)
             alert('sign in failed: ' + error.message)
@@ -59,11 +58,11 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     input: {
-        marginVertical: 4,
+        marginVertical: 10,
         height: 50,
-        borderWidth: 1,
-        borderRadius: 4,
-        padding: 10,
+        borderWidth: 1.5,
+        borderRadius: 28,
+        padding: 20,
         backgroundColor: '#fff',
     }
 });
