@@ -88,6 +88,9 @@ const Login = () => {
                   width: '70%',
                   alignSelf: 'center',
                 }}
+                textStyle={{
+                  fontFamily: 'Inter',
+                }}
               />
               <CustomButton
                 title="Sign Up"
@@ -97,6 +100,9 @@ const Login = () => {
                   marginVertical: 5,
                   width: '70%',
                   alignSelf: 'center',
+                }}
+                textStyle={{
+                  fontFamily: 'Inter',
                 }}
               />
             </>
@@ -125,5 +131,6 @@ export const styles = StyleSheet.create({
     borderRadius: 28,
     padding: 20,
     backgroundColor: '#fff',
+    fontFamily: 'Inter',
   },
 });
