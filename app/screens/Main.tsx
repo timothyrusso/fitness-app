@@ -18,20 +18,6 @@ const Main = ({ navigation }: MainProps) => {
         title="Open Page"
       />
       <Button onPress={() => FIREBASE_AUTH.signOut()} title="Logout" />
-      <CustomButton
-        buttonColor="transparent"
-        titleColor="#000"
-        title="CANCEL"
-        buttonStyle={{
-          width: '40%',
-          alignSelf: 'center',
-          borderWidth: 1,
-          borderColor: '#1c1c1c',
-          borderRadius: 6,
-        }}
-        textStyle={{ fontSize: 20 }}
-        onPress={() => console.log('I am the fourth button')}
-      />
       <TabMenu />
     </View>
   );

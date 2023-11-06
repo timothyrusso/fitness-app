@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native';
+import { View, Text, ScrollView } from 'react-native';
 import React from 'react';
 import { styles } from './Login';
 import Widget from '../components/Widget/Widget';
@@ -6,6 +6,17 @@ import Widget from '../components/Widget/Widget';
 const ExamplePage = () => {
   return (
     <View style={styles.container}>
+      <Text>First page</Text>
+      <Widget />
+      <Widget />
+      <Widget />
+      <Widget />
+      <Widget />
+      <Widget />
+      <Widget />
+      <Widget />
+      <Widget />
+      <Widget />
       <Widget />
     </View>
   );
