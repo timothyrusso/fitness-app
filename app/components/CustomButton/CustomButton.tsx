@@ -15,6 +15,7 @@ interface CustomButtonProps {
   titleColor?: string;
   buttonStyle?: StyleProp<ViewStyle>;
   textStyle?: StyleProp<TextStyle>;
+  children?: React.ReactNode;
 }
 
 const CustomButton: FC<CustomButtonProps> = ({
@@ -24,6 +25,7 @@ const CustomButton: FC<CustomButtonProps> = ({
   titleColor,
   buttonStyle,
   textStyle,
+  children,
 }) => {
   return (
     <TouchableOpacity
@@ -45,6 +47,7 @@ const CustomButton: FC<CustomButtonProps> = ({
       >
         {title}
       </Text>
+      {children}
     </TouchableOpacity>
   );
 };

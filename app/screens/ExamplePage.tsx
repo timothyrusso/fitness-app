@@ -1,23 +1,17 @@
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import React from 'react';
 import { styles } from './Login';
-import Widget from '../components/Widget/Widget';
+import { LinearGradient } from 'expo-linear-gradient';
 
 const ExamplePage = () => {
   return (
     <View style={styles.container}>
-      <Text>First page</Text>
-      <Widget />
-      <Widget />
-      <Widget />
-      <Widget />
-      <Widget />
-      <Widget />
-      <Widget />
-      <Widget />
-      <Widget />
-      <Widget />
-      <Widget />
+      <LinearGradient
+        colors={['#051937', '#004d7a', '#008793', '#00bf72', '#a8eb12']}
+        style={styles.container}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 1 }}
+      ></LinearGradient>
     </View>
   );
 };

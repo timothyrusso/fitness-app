@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     borderTopWidth: 0,
     marginHorizontal: 20,
     marginVertical: 20,
-    borderRadius: 10,
+    borderRadius: 100,
     overflow: 'hidden',
     height: 60,
   },

@@ -4,7 +4,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import ExamplePage from '../../screens/ExamplePage';
 import ExamplePageSecond from '../../screens/ExamplePageSecond';
-import Main from '../../screens/Main';
 import { BlurView } from 'expo-blur';
 
 const Tab = createBottomTabNavigator();
