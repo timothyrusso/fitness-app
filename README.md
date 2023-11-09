@@ -6,3 +6,4 @@
 [Design](https://www.freefigmatemplates.com/)
 [File structure](https://medium.com/@nitishprasad/react-native-folder-structure-e9ceab3150f3)
 [File structure 2](https://www.reactnative.express/app/project_structure)
+[Animations](https://docs.swmansion.com/react-native-reanimated/)
