@@ -5,13 +5,14 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import ExamplePage from '../../screens/ExamplePage';
 import ExamplePageSecond from '../../screens/ExamplePageSecond';
 import { BlurView } from 'expo-blur';
+import ProfilePage from '../../screens/Profile';
 
 const Tab = createBottomTabNavigator();
 
 const tabsConfig = [
   {
-    name: 'Main page',
-    component: ExamplePage,
+    name: 'Profile page',
+    component: ProfilePage,
     icon: 'home',
   },
   {
