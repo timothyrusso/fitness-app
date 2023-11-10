@@ -13,22 +13,22 @@ const tabsConfig = [
   {
     name: 'Profile page',
     component: ProfilePage,
-    icon: 'home',
+    icon: 'person',
   },
   {
     name: 'Notifications',
     component: ExamplePageSecond,
-    icon: 'search',
+    icon: 'body',
   },
   {
     name: 'Exercises',
     component: ExamplePage,
-    icon: 'link',
+    icon: 'barbell-sharp',
   },
   {
     name: 'Profile',
     component: ExamplePageSecond,
-    icon: 'body',
+    icon: 'time',
   },
 ];
 
@@ -40,7 +40,7 @@ const TabMenu = () => {
       screenOptions={{
         tabBarStyle: { ...styles.container },
         tabBarBackground: () => (
-          <BlurView tint="dark" intensity={40} style={{ flex: 1 }} />
+          <BlurView tint="light" intensity={40} style={{ flex: 1 }} />
         ),
         tabBarInactiveTintColor: 'black',
         tabBarActiveTintColor: 'white',
