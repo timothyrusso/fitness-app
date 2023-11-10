@@ -6,6 +6,7 @@ import ExamplePage from '../../screens/ExamplePage';
 import ExamplePageSecond from '../../screens/ExamplePageSecond';
 import { BlurView } from 'expo-blur';
 import ProfilePage from '../../screens/Profile';
+import Exercises from '../../screens/Exercises';
 
 const Tab = createBottomTabNavigator();
 
@@ -16,8 +17,8 @@ const tabsConfig = [
     icon: 'person',
   },
   {
-    name: 'Notifications',
-    component: ExamplePageSecond,
+    name: 'Exercises page',
+    component: Exercises,
     icon: 'body',
   },
   {
