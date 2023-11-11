@@ -17,13 +17,13 @@ const tabsConfig = [
     icon: 'person',
   },
   {
-    name: 'Exercises page',
-    component: Exercises,
+    name: 'Workouts page',
+    component: ExamplePage,
     icon: 'body',
   },
   {
-    name: 'Exercises',
-    component: ExamplePage,
+    name: 'Exercises page',
+    component: Exercises,
     icon: 'barbell-sharp',
   },
   {
