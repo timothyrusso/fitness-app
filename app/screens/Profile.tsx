@@ -63,6 +63,7 @@ const ProfilePage = ({ navigation }: ProfileProps) => {
         <View
           style={{
             alignItems: 'flex-start',
+            alignSelf: 'center',
             width: '100%',
             height: '30%',
             borderBottomLeftRadius: 20,

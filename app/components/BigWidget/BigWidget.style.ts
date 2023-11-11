@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     marginHorizontal: 10,
     backgroundColor: 'red',
-    height: '34%',
+    height: 240,
     justifyContent: 'flex-start',
   },
 });

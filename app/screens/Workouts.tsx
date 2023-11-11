@@ -1,10 +1,10 @@
 import { View, ScrollView, Text } from 'react-native';
 import React from 'react';
-import Widget from '../components/Widget/Widget';
 import IconButton from '../components/IconButton/IconButton';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import BigWidget from '../components/BigWidget/BigWidget';
 
-const Exercises = () => {
+const Workouts = () => {
   return (
     <View style={{ flex: 1, justifyContent: 'center' }}>
       <ScrollView
@@ -20,7 +20,7 @@ const Exercises = () => {
             marginVertical: 35,
           }}
         >
-          Exercises
+          Workouts
         </Text>
         <IconButton
           onPress={() => console.log('hello')}
@@ -48,46 +48,25 @@ const Exercises = () => {
             borderRadius: 100,
           }}
         />
-        <Widget
+        <BigWidget
           customStyle={{
             marginHorizontal: 20,
             marginVertical: 10,
-            backgroundColor: '#FF7B62',
+            backgroundColor: '#36C3BB',
           }}
         />
-        <Widget
+        <BigWidget
           customStyle={{
             marginHorizontal: 20,
             marginVertical: 10,
-            backgroundColor: '#FF7B62',
+            backgroundColor: '#36C3BB',
           }}
         />
-        <Widget
+        <BigWidget
           customStyle={{
             marginHorizontal: 20,
             marginVertical: 10,
-            backgroundColor: '#FF7B62',
-          }}
-        />
-        <Widget
-          customStyle={{
-            marginHorizontal: 20,
-            marginVertical: 10,
-            backgroundColor: '#FF7B62',
-          }}
-        />
-        <Widget
-          customStyle={{
-            marginHorizontal: 20,
-            marginVertical: 10,
-            backgroundColor: '#FF7B62',
-          }}
-        />
-        <Widget
-          customStyle={{
-            marginHorizontal: 20,
-            marginVertical: 10,
-            backgroundColor: '#FF7B62',
+            backgroundColor: '#36C3BB',
           }}
         />
       </ScrollView>
@@ -95,4 +74,4 @@ const Exercises = () => {
   );
 };
 
-export default Exercises;
+export default Workouts;
