@@ -24,6 +24,15 @@ const styles = StyleSheet.create({
     fontSize: 17,
     fontWeight: '600',
   },
+  firstWidget: {
+    marginTop: '25%',
+    marginHorizontal: 20,
+    backgroundColor: '#DFF265',
+  },
+  secondWidget: {
+    marginHorizontal: 20,
+    backgroundColor: '#FF7B62',
+  },
 });
 
 export default styles;

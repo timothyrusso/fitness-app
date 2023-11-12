@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './TabMenu.style';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import ExamplePage from '../../screens/ExamplePage';
 import ExamplePageSecond from '../../screens/ExamplePageSecond';
 import { BlurView } from 'expo-blur';
 import ProfilePage from '../../screens/Profile/Profile';

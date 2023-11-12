@@ -6,8 +6,9 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import { NavigationProp } from '@react-navigation/native';
 import Widget from '../../components/Widget/Widget';
 import { LinearGradient } from 'expo-linear-gradient';
-import { BlurView } from 'expo-blur';
 import styles from './Profile.style';
+import Header from '../../components/Header/Header';
+import Avatar from '../../components/Avatar/Avatar';
 
 interface ProfileProps {
   navigation: NavigationProp<any, any>;
@@ -37,51 +38,10 @@ const ProfilePage = ({ navigation }: ProfileProps) => {
           buttonStyle={styles.rightIconButton}
         />
         <Text style={styles.title}>Profile</Text>
-        <View
-          style={{
-            alignItems: 'flex-start',
-            alignSelf: 'center',
-            width: '100%',
-            height: '30%',
-            borderBottomLeftRadius: 20,
-            borderBottomRightRadius: 20,
-            overflow: 'hidden',
-          }}
-        >
-          <BlurView
-            tint="light"
-            intensity={40}
-            style={{
-              position: 'absolute',
-              width: '100%',
-              height: '100%',
-            }}
-          />
-        </View>
-        <View
-          style={{
-            width: 130,
-            height: 130,
-            borderRadius: 100,
-            backgroundColor: '#37C3BB',
-            position: 'absolute',
-            marginTop: '35%',
-            alignSelf: 'center',
-          }}
-        ></View>
-        <Widget
-          customStyle={{
-            marginTop: '25%',
-            marginHorizontal: 20,
-            backgroundColor: '#DFF265',
-          }}
-        />
-        <Widget
-          customStyle={{
-            marginHorizontal: 20,
-            backgroundColor: '#FF7B62',
-          }}
-        />
+        <Header />
+        <Avatar />
+        <Widget customStyle={styles.firstWidget} />
+        <Widget customStyle={styles.secondWidget} />
       </LinearGradient>
     </View>
   );
