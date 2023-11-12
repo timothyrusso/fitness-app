@@ -1,7 +1,7 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Main from '../screens/Main';
 import ExamplePage from '../screens/ExamplePage';
-import ProfilePage from '../screens/Profile';
+import ProfilePage from '../screens/Profile/Profile';
 
 const MainPageStack = createNativeStackNavigator();
 

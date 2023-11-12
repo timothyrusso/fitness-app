@@ -5,7 +5,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import ExamplePage from '../../screens/ExamplePage';
 import ExamplePageSecond from '../../screens/ExamplePageSecond';
 import { BlurView } from 'expo-blur';
-import ProfilePage from '../../screens/Profile';
+import ProfilePage from '../../screens/Profile/Profile';
 import Exercises from '../../screens/Exercises';
 import Workouts from '../../screens/Workouts';
 

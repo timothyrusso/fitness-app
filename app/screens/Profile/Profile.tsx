@@ -1,12 +1,13 @@
 import { View, Text } from 'react-native';
 import React from 'react';
-import IconButton from '../components/IconButton/IconButton';
-import { FIREBASE_AUTH } from '../../FirebaseConfig';
+import IconButton from '../../components/IconButton/IconButton';
+import { FIREBASE_AUTH } from '../../../FirebaseConfig';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { NavigationProp } from '@react-navigation/native';
-import Widget from '../components/Widget/Widget';
+import Widget from '../../components/Widget/Widget';
 import { LinearGradient } from 'expo-linear-gradient';
 import { BlurView } from 'expo-blur';
+import styles from './Profile.style';
 
 interface ProfileProps {
   navigation: NavigationProp<any, any>;
@@ -25,13 +26,7 @@ const ProfilePage = ({ navigation }: ProfileProps) => {
           onPress={() => navigation.navigate('Example Page')}
           icon={<Ionicons name="settings-outline" color={'black'} size={22} />}
           buttonColor="transparent"
-          buttonStyle={{
-            position: 'absolute',
-            top: 20,
-            left: 20,
-            zIndex: 1,
-            borderRadius: 100,
-          }}
+          buttonStyle={styles.leftIconButton}
         />
         <IconButton
           onPress={() => FIREBASE_AUTH.signOut()}
@@ -39,27 +34,9 @@ const ProfilePage = ({ navigation }: ProfileProps) => {
             <Ionicons name="close-circle-outline" color={'black'} size={23} />
           }
           buttonColor="transparent"
-          buttonStyle={{
-            position: 'absolute',
-            top: 20,
-            right: 20,
-            zIndex: 1,
-            borderRadius: 100,
-          }}
+          buttonStyle={styles.rightIconButton}
         />
-        <Text
-          style={{
-            position: 'absolute',
-            top: 35,
-            alignSelf: 'center',
-            color: 'black',
-            zIndex: 1,
-            fontSize: 17,
-            fontWeight: '600',
-          }}
-        >
-          Profile
-        </Text>
+        <Text style={styles.title}>Profile</Text>
         <View
           style={{
             alignItems: 'flex-start',
