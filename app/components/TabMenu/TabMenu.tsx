@@ -6,7 +6,7 @@ import ExamplePageSecond from '../../screens/ExamplePageSecond';
 import { BlurView } from 'expo-blur';
 import ProfilePage from '../../screens/Profile/Profile';
 import Exercises from '../../screens/Exercises';
-import Workouts from '../../screens/Workouts';
+import Workouts from '../../screens/Workouts/Workouts';
 
 const Tab = createBottomTabNavigator();
 
