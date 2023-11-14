@@ -5,7 +5,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import ExamplePageSecond from '../../screens/ExamplePageSecond';
 import { BlurView } from 'expo-blur';
 import ProfilePage from '../../screens/Profile/Profile';
-import Exercises from '../../screens/Exercises';
+import Exercises from '../../screens/Exercises/Exercises';
 import Workouts from '../../screens/Workouts/Workouts';
 
 const Tab = createBottomTabNavigator();
