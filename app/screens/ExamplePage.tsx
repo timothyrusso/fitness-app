@@ -1,6 +1,6 @@
 import { View } from 'react-native';
 import React from 'react';
-import { styles } from './Login';
+import { styles } from './Login/Login';
 import { LinearGradient } from 'expo-linear-gradient';
 
 const ExamplePage = () => {

@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native';
 import React from 'react';
-import { styles } from './Login';
+import { styles } from './Login/Login';
 import Widget from '../components/Widget/Widget';
 
 const ExamplePageSecond = () => {

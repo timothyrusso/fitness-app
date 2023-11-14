@@ -1,20 +1,18 @@
 import {
   View,
-  Text,
-  StyleSheet,
   TextInput,
   ActivityIndicator,
-  Button,
   KeyboardAvoidingView,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import React, { useState } from 'react';
-import { FIREBASE_AUTH } from '../../FirebaseConfig';
+import { FIREBASE_AUTH } from '../../../FirebaseConfig';
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from 'firebase/auth';
-import CustomButton from '../components/CustomButton/CustomButton';
+import CustomButton from '../../components/CustomButton/CustomButton';
+import styles from './Login.style';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -82,12 +80,7 @@ const Login = () => {
               <CustomButton
                 title="Sign In"
                 onPress={signIn}
-                buttonStyle={{
-                  borderRadius: 20,
-                  marginVertical: 5,
-                  width: '70%',
-                  alignSelf: 'center',
-                }}
+                buttonStyle={styles.customButton}
                 textStyle={{
                   fontFamily: 'Inter',
                 }}
@@ -95,12 +88,7 @@ const Login = () => {
               <CustomButton
                 title="Sign Up"
                 onPress={signUp}
-                buttonStyle={{
-                  borderRadius: 20,
-                  marginVertical: 5,
-                  width: '70%',
-                  alignSelf: 'center',
-                }}
+                buttonStyle={styles.customButton}
                 textStyle={{
                   fontFamily: 'Inter',
                 }}
@@ -114,23 +102,3 @@ const Login = () => {
 };
 
 export default Login;
-
-export const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-  },
-  gradientContainer: {
-    flex: 1,
-  },
-  input: {
-    marginHorizontal: 20,
-    marginVertical: 10,
-    height: 50,
-    borderWidth: 1,
-    borderRadius: 28,
-    padding: 20,
-    backgroundColor: '#fff',
-    fontFamily: 'Inter',
-  },
-});
