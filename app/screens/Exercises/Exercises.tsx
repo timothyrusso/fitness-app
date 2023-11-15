@@ -1,13 +1,13 @@
 import { View, ScrollView, Text } from 'react-native';
 import React from 'react';
-import Widget from '../../components/Widget/Widget';
+import ExerciseWidget from './components/ExerciseWidget/ExerciseWidget';
 import IconButton from '../../components/IconButton/IconButton';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import styles from './Exercises.style';
 import { getExerciseList } from './service';
 
 const exercisesList = getExerciseList().map((exercise) => (
-  <Widget key={exercise.id} customStyle={styles.smallWidget} />
+  <ExerciseWidget key={exercise.id} />
 ));
 
 const Exercises = () => {

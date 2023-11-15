@@ -4,10 +4,11 @@ import styles from './Widget.style';
 
 interface WidgetProps {
   customStyle?: StyleProp<ViewStyle>;
+  children?: React.ReactNode;
 }
 
-const Widget = ({ customStyle }: WidgetProps) => {
-  return <View style={[styles.container, customStyle]}></View>;
+const Widget = ({ customStyle, children }: WidgetProps) => {
+  return <View style={[styles.container, customStyle]}>{children}</View>;
 };
 
 export default Widget;

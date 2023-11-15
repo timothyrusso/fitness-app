@@ -23,11 +23,6 @@ const styles = StyleSheet.create({
     zIndex: 1,
     borderRadius: 100,
   },
-  smallWidget: {
-    marginHorizontal: 20,
-    marginVertical: 10,
-    backgroundColor: '#FF7B62',
-  },
 });
 
 export default styles;
