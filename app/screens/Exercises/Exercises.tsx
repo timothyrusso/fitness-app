@@ -4,6 +4,11 @@ import Widget from '../../components/Widget/Widget';
 import IconButton from '../../components/IconButton/IconButton';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import styles from './Exercises.style';
+import { getExerciseList } from './service';
+
+const exercisesList = getExerciseList().map((exercise) => (
+  <Widget key={exercise.id} customStyle={styles.smallWidget} />
+));
 
 const Exercises = () => {
   return (
@@ -26,12 +31,7 @@ const Exercises = () => {
           buttonColor="#A3F263"
           buttonStyle={styles.leftIconButton}
         />
-        <Widget customStyle={styles.smallWidget} />
-        <Widget customStyle={styles.smallWidget} />
-        <Widget customStyle={styles.smallWidget} />
-        <Widget customStyle={styles.smallWidget} />
-        <Widget customStyle={styles.smallWidget} />
-        <Widget customStyle={styles.smallWidget} />
+        {exercisesList}
       </ScrollView>
     </View>
   );
