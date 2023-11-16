@@ -1,8 +1,8 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Main from '../screens/Main/Main';
-import ExamplePage from '../screens/ExamplePage';
 import ExamplePageSecond from '../screens/ExamplePageSecond';
 import ProfilePage from '../screens/Profile/Profile';
+import ExercisePage from '../screens/ExercisePage/ExercisePage';
 
 const MainPageStack = createNativeStackNavigator();
 
@@ -18,8 +18,8 @@ export const MainPageNavigator = () => {
       <MainPageStack.Screen name="Profile Page" component={ProfilePage} />
       <MainPageStack.Screen
         name="Exercise Page"
-        component={ExamplePage}
-        options={{ headerShown: true }}
+        component={ExercisePage}
+        options={{ headerShown: false }}
       />
     </MainPageStack.Navigator>
   );

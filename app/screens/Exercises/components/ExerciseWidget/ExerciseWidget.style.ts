@@ -22,9 +22,10 @@ const styles = StyleSheet.create({
     position: 'absolute',
   },
   tag: {
-    position: 'absolute',
-    bottom: 18,
-    right: 18,
+    position: 'relative',
+    alignSelf: 'flex-end',
+    marginBottom: 5,
+    marginRight: 5,
   },
 });
 

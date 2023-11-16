@@ -33,8 +33,6 @@ const tabsConfig = [
   },
 ];
 
-console.log(tabsConfig);
-
 const TabMenu = () => {
   return (
     <Tab.Navigator

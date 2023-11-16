@@ -17,6 +17,10 @@ const Exercises = ({ navigation }: ExercisesProps) => {
       key={exercise.id}
       navigation={navigation}
       id={exercise.id}
+      title={exercise.name}
+      description={exercise.description}
+      image={exercise.imageUrl}
+      tags={exercise.tags}
     />
   ));
 

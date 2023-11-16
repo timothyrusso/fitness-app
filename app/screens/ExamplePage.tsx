@@ -1,16 +1,8 @@
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import React from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
-import { RouteProp } from '@react-navigation/native';
 
-interface ExamplePageProps {
-  route: RouteProp<any, any>;
-}
-
-const ExamplePage = ({ route }: ExamplePageProps) => {
-  const { exerciseId } = route.params;
-  console.log(exerciseId);
-
+const ExamplePage = () => {
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient
@@ -18,9 +10,7 @@ const ExamplePage = ({ route }: ExamplePageProps) => {
         style={{ flex: 1 }}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
-      >
-        <Text style={{ color: 'white' }}>{exerciseId}</Text>
-      </LinearGradient>
+      ></LinearGradient>
     </View>
   );
 };
