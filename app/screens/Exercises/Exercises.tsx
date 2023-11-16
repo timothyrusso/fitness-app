@@ -5,12 +5,21 @@ import IconButton from '../../components/IconButton/IconButton';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import styles from './Exercises.style';
 import { getExerciseList } from './service';
+import { NavigationProp } from '@react-navigation/native';
 
-const exercisesList = getExerciseList().map((exercise) => (
-  <ExerciseWidget key={exercise.id} />
-));
+interface ExercisesProps {
+  navigation: NavigationProp<any, any>;
+}
 
-const Exercises = () => {
+const Exercises = ({ navigation }: ExercisesProps) => {
+  const exercisesList = getExerciseList().map((exercise) => (
+    <ExerciseWidget
+      key={exercise.id}
+      navigation={navigation}
+      id={exercise.id}
+    />
+  ));
+
   return (
     <View style={{ flex: 1, justifyContent: 'center' }}>
       <ScrollView
