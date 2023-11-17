@@ -10,23 +10,25 @@ import { FIREBASE_AUTH } from '../../../FirebaseConfig';
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  AuthError,
 } from 'firebase/auth';
 import CustomButton from '../../components/CustomButton/CustomButton';
 import styles from './Login.style';
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(false);
   const auth = FIREBASE_AUTH;
 
   const signIn = async () => {
     setLoading(true);
     try {
       const response = await signInWithEmailAndPassword(auth, email, password);
-    } catch (error: any) {
-      console.log(error);
-      alert('sign in failed: ' + error.message);
+    } catch (error) {
+      const typedError = error as AuthError;
+      console.log(typedError);
+      alert('Sign in failed: ' + typedError.message);
     } finally {
       setLoading(false);
     }
@@ -41,9 +43,10 @@ const Login = () => {
         password
       );
       alert('Sign up successful, now go to Sign in!');
-    } catch (error: any) {
-      console.log(error);
-      alert('sign in failed: ' + error.message);
+    } catch (error) {
+      const typedError = error as AuthError;
+      console.log(typedError);
+      alert('Sign up failed: ' + typedError.message);
     } finally {
       setLoading(false);
     }
@@ -63,7 +66,7 @@ const Login = () => {
             style={styles.input}
             placeholder="Email"
             autoCapitalize="none"
-            onChangeText={(text) => setEmail(text)}
+            onChangeText={(text: string) => setEmail(text)}
           ></TextInput>
           <TextInput
             secureTextEntry={true}
@@ -71,7 +74,7 @@ const Login = () => {
             style={styles.input}
             placeholder="Password"
             autoCapitalize="none"
-            onChangeText={(text) => setPassword(text)}
+            onChangeText={(text: string) => setPassword(text)}
           ></TextInput>
           {loading ? (
             <ActivityIndicator size="large" color="#0000ff" />
