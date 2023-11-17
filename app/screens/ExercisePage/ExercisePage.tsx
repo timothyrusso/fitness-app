@@ -5,9 +5,10 @@ import { RouteProp, NavigationProp } from '@react-navigation/native';
 import IconButton from '../../components/IconButton/IconButton';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import styles from './ExercisePage.style';
+import { RootStackParamList } from '../../navigation/MainPageNavigator';
 
 interface ExercisePageProps {
-  navigation: NavigationProp<any, any>;
+  navigation: NavigationProp<RootStackParamList, 'Exercise Page'>;
   route: RouteProp<any, any>;
 }
 

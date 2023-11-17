@@ -6,6 +6,13 @@ import ExercisePage from '../screens/ExercisePage/ExercisePage';
 
 const MainPageStack = createNativeStackNavigator();
 
+export interface RootStackParamList {
+  'Main Page': undefined;
+  'Example Page': undefined;
+  'Profile Page': undefined;
+  'Exercise Page': undefined;
+}
+
 export const MainPageNavigator = () => {
   return (
     <MainPageStack.Navigator>

@@ -9,9 +9,10 @@ import { LinearGradient } from 'expo-linear-gradient';
 import styles from './Profile.style';
 import Header from '../../components/Header/Header';
 import Avatar from '../../components/Avatar/Avatar';
+import { RootStackParamList } from '../../navigation/MainPageNavigator';
 
 interface ProfileProps {
-  navigation: NavigationProp<any, any>;
+  navigation: NavigationProp<RootStackParamList, 'Profile Page'>;
 }
 
 const ProfilePage = ({ navigation }: ProfileProps) => {
