@@ -45,7 +45,7 @@ const ExercisePage = ({ navigation, route }: ExercisePageProps) => {
         />
         <Text style={styles.description}>{description}</Text>
         {tags.map((tag: string) => (
-          <Tag text={tag} />
+          <Tag customStyle={styles.tags} text={tag} />
         ))}
       </LinearGradient>
     </View>

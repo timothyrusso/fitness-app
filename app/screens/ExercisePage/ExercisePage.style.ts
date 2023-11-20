@@ -34,6 +34,10 @@ const styles = StyleSheet.create({
     padding: 10,
     textAlign: 'center',
   },
+  tags: {
+    marginLeft: 40,
+    marginTop: 8,
+  },
 });
 
 export default styles;
