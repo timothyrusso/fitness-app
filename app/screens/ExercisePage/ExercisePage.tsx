@@ -6,6 +6,7 @@ import IconButton from '../../components/IconButton/IconButton';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import styles from './ExercisePage.style';
 import { RootStackParamList } from '../../navigation/MainPageNavigator';
+import Tag from '../../components/Tag/Tag';
 
 interface ExercisePageProps {
   navigation: NavigationProp<RootStackParamList, 'Exercise Page'>;
@@ -13,7 +14,7 @@ interface ExercisePageProps {
 }
 
 const ExercisePage = ({ navigation, route }: ExercisePageProps) => {
-  const { id, title, description, image } = route.params;
+  const { id, title, description, image, tags } = route.params;
 
   return (
     <View style={{ flex: 1 }}>
@@ -43,6 +44,9 @@ const ExercisePage = ({ navigation, route }: ExercisePageProps) => {
           }}
         />
         <Text style={styles.description}>{description}</Text>
+        {tags.map((tag: string) => (
+          <Tag text={tag} />
+        ))}
       </LinearGradient>
     </View>
   );
